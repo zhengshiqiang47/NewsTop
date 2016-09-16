@@ -134,7 +134,7 @@ public class CollectionFragment extends Fragment {
             @Override
             public void onDismiss(@NonNull Card card, int position) {
                 MyCollectionLB.get(getActivity()).getCollectionNewses().remove(position);
-                ((HomeFragment.HomeFragmentCallBack)getActivity()).snackBar("删除成功!");
+                ((HomeFragment.HomeFragmentCallBack)getActivity()).snackBar("删除成功!!");
             }
         });
         return v;
