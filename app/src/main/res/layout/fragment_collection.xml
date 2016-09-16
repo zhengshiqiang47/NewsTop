@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/collection_imageview"
+            android:src="@drawable/collection"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"></ImageView>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageView
+            android:id="@+id/image_select_icon"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_photo_camera_black_48dp"/>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_brightness_3_black_48dp"/>
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_settings_black_48dp"/>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_collection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.dexafree.materialList.view.MaterialListView
+            android:id="@+id/collecion_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.dexafree.materialList.view.MaterialListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

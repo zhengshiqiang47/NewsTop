@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/webview_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:elevation="8dp"
+            android:background="@color/colorPrimary">
+            <RelativeLayout
+                android:layout_marginTop="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/webview_back_icon"
+                    android:clickable="true"
+                    android:src="@mipmap/ic_arrow_back_white_48dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:layout_toRightOf="@id/webview_back_icon"
+                    android:id="@+id/webview_title_tv"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <com.example.zsq.newstop.NewsWebView
+            android:id="@+id/content_webview"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            >
+        </com.example.zsq.newstop.NewsWebView>
+        <ProgressBar
+            android:id="@+id/webview_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+</FrameLayout>
+
